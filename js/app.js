@@ -23,4 +23,13 @@ $(document).ready(function() {
             mobileNav.classList.remove('open');  
         });
     }
+
+    // Close the mobile navigation when an anchor link is clicked
+    const navLinks = document.querySelectorAll('.mobile-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            console.log("Anchor link clicked!"); // Debugging statement
+            mobileNav.classList.remove('open');  // Close the menu
+        });
+    });
 });
